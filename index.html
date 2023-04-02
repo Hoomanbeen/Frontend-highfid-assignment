@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=shadow-multiple">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+        <title> Carbon Tiptoe </title>
+        <style>
+            .w3-overpass {
+              font-family: "Righteous";
+            }
+            .w3-lobster {
+                font-family: "Lobster", Sans-serif;
+            }
+            body, h1, h2, h3, h4, h5, h6 {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .w3-custom {
+                background-color: #A03472 ;
+            }
+            .w3-custom2 {
+                background-color:#56BB56;
+            }
+            .w3-logo{
+              color:#56BB56;
+            }
+            .lightg{
+              color: #87D687;
+            }
+            .lightgb{
+              background-color: #87D687;
+            }
+            .w3-login{
+              color:#A03472;
+            }
+            .w3-back{
+              background-color: #EAEA6C;
+            }
+            .footer{
+              background-color: #68063D;
+            }
+            .modal {
+              display: none; /* Hidden by default */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              padding-top: 100px; 
+              left: 0;
+              top: 0;
+              width: 100%; 
+              height: 100%; 
+              overflow: auto; 
+              background-color: rgb(0,0,0); 
+              background-color: rgba(0,0,0,0.4); 
+            }
+
+
+            .modal-content {
+              background-color: #fefefe;
+              margin: auto;
+              padding: 20px;
+              border: 1px solid #888;
+              width: 50%;
+            }
+
+
+            .close {
+              color: #aaaaaa;
+              float: right;
+              font-size: 28px;
+              font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+              color: #000;
+              text-decoration: none;
+              cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body class="w3-back">
+        <div class="w3-top">
+            <div class="w3-bar w3-custom w3-padding w3-card">
+              <a href="#home" class="w3-logo w3-xlarge w3-padding-small w3-ripple w3-bar-item w3-btn w3-round-large w3-overpass"><b>Carbon Tiptoe</b></a>
+              <div class="w3-right">
+                <p></p>
+                <a href="#about" class="w3-bar-item w3-btn w3-padding-small w3-ripple w3-logo w3-round"><b>About</b></a>
+                <a href="#news" class="w3-bar-item w3-btn w3-padding-small w3-ripple w3-logo w3-round"><b>News</b></a>
+                <a href="#calculate" class="w3-bar-item w3-btn w3-padding-small w3-ripple w3-logo w3-round"><b>Calculate</b></a>
+                <a class="w3-bar-item w3-btn w3-custom2 w3-login w3-padding-small w3-ripple lightgb w3-round" style="margin-left: 10px"><b>Login</b></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="w3-display-container" style="margin-bottom:25px">
+            <img src="forest2.jpg" alt="Forest" style="width:100%">
+              <div class="w3-display-bottomleft w3-container w3-logo w3-custom w3-round-large w3-hide-small "
+               style="bottom:10%;opacity:0.9;width:50%">
+                <h2 class="w3-center w3-animate-left"><b>Take control of your carbon footprint today</b></h2>
+                <div class="w3-right">
+                  <button id="myBtn" class="w3-bar-item w3-btn w3-xlarge w3-animate-left lightgb w3-padding-small w3-ripple w3-login w3-round"><b>Register Now!</b></button>
+                  <p></p>
+                </div>
+              </div>
+          </div>
+
+          <div class="w3-row w3-container" style="margin:50px 0">
+            <div class="w3-quarter w3-container w3-round-xlarge w3-custom w3-animate-left" style="margin-left: 50px">
+              <div>
+                <img src="footprint.jpg" class="w3-round-xlarge"  style="margin:15px 0; width:100%; opacity:0.6">
+                <h2 class="w3-logo w3-center"><b>Your carbon footprint</b></h2>
+                <h4 class="lightg w3-center">Your carbon footprint is made up of your diet, transportation choices, home size, shopping and recreational activities, usage of electricity, heating, and heavy appliances.
+                    To calculate your footprint you will be asked several questions around these topics, and based on your answers an estimate of your own footprint will be calculated.
+                </h4>
+                <button class="w3-btn w3-block w3-round-xlarge w3-custom2 lightgb w3-login w3-ripple"><b>Calculate your carbon footprint today!</b></button>
+                <p></p>
+              </div>
+            </div>
+            <div class="w3-twothird w3-container w3-round-xlarge w3-custom w3-animate-right" style="margin-left: 50px">
+              <div class="w3-center">
+                <img src="Emissions.png" class="w3-round-xlarge" style="margin:15px; width:51%; opacity:0.6">
+                <h2 class="w3-logo"><b>Why Register with us</b></h2>
+                <h4 class="lightg">It is good to be aware of how much CO2 you personally contribute, however it is in your best interest to have a more complete image. By registering you can keep a log of your monthly carbon footprint, helping you take control of your own carbon emissions. You will also be get access to upto date news and information surrounding our environment and planet.</h4>
+              </div>
+            </div>
+          </div>
+          <div id="myModal" class="modal">
+            <div class="modal-content w3-round-xlarge">
+              <span class="close">&times;</span>
+              <div id="ct-form"><form>
+                <div id="userDetails">
+                  <h5><b>Personal details</b></h5>
+                  <label>Given Name</label>
+                  <input class="w3-input lightgb" type="text">
+                  <label>Surname</label>
+                  <input class="w3-input lightgb" type="text">
+                  <label>Username</label>
+                  <input class="w3-input lightgb" type="text">
+                  <label>Password</label>
+                  <input class="w3-input lightgb" type="text">
+                </div>
+                <div id="addresses">
+                  <h5><b>Addresses</b></h5>
+                  <label>Home Address</label>
+                  <input class="w3-input lightgb" type="text">
+                  <label>Work Address</label>
+                  <input class="w3-input lightgb" type="text">
+                </div>
+                <div id="contacts">
+                  <h5><b>Contacts</b></h5>
+                  <label>Mobile Number</label>
+                  <input class="w3-input lightgb" type="text">
+                  <label>Email</label>
+                  <input class="w3-input lightgb" type="text">
+                </div>
+              </form></div>
+            </div>
+          </div>
+          <footer class="w3-center footer w3-padding-16 w3-logo">
+            <p>Join today and keep track of your carbon footprint</p>
+            <p>(Insert contact information here)</p>
+          </footer>
+
+          <script>
+            var modal = document.getElementById("myModal");
+            
+            var btn = document.getElementById("myBtn");
+            
+            var span = document.getElementsByClassName("close")[0];
+            
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
+    </body>
+</html>
